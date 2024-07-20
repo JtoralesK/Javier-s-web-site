@@ -2,11 +2,18 @@
 
 ---
 
-<nav class="h-16 w-full flex flex-row justify-between items-center lg:pt-3">
+<nav
+  class="h-16 w-full flex flex-row justify-between items-center lg:pt-3 sm:relative px-6 lg:px-12 xl:px-24 bg-gray-1 dark:bg-dark-one"
+>
   <img
     src="https://res.cloudinary.com/apxschool/image/upload/v1721274096/logoSinFondo_b677mv.png"
     alt="Logo"
-    class="w-10"
+    class="w-10 dark:hidden"
+  />
+  <img
+    src="https://res.cloudinary.com/apxschool/image/upload/v1721482747/logoSinFondoBlanco_lawv9c.png"
+    alt="Logo"
+    class="w-10 hidden dark:block"
   />
   <ul class="hidden lg:flex flex-row gap-6">
     <a href="#aboutme">
@@ -23,26 +30,65 @@
     </a>
   </ul>
   <div class="hidden lg:flex flex-row items-center gap-2">
-    <button class="material-icons text-third-color change" id="change"
+    <button class="material-icons text-dark-two change sm:hidden" id="change"
       >flare</button
     >
 
-    <button class="rounded rounded-xl bg-third-color p-2 text-principal-color"
+    <button class="rounded rounded-xl bg-dark-two p-2 text-principal-color"
       >Download CV</button
     >
   </div>
-  <button class="lg:hidden">
-    <span class="material-icons">menu</span>
+  <button id="menuButton" class="lg:hidden">
+    <span class="material-icons dark:text-principal-color">menu</span>
   </button>
 </nav>
 
+<div
+  id="mobileMenu"
+  class="hidden lg:hidden sm:h-auto w-full bg-gray-2 dark:bg-dark-two dark:text-principal-color absolute top-16 left-0 overflow-hidden transition-height"
+>
+  <ul class="lg:flex flex-col gap-6">
+    <a href="#aboutme">
+      <li class="px-3 py-4 text-xl text-principal-color">About me</li>
+    </a>
+    <a href="#aboutme">
+      <li class="px-3 py-4 text-xl text-principal-color">Contact</li>
+    </a>
+    <a href="#aboutme">
+      <li class="px-3 py-4 text-xl text-principal-color">Blog</li>
+    </a>
+    <a href="#aboutme">
+      <li class="px-3 py-4 text-xl text-principal-color">Services</li>
+    </a>
+  </ul>
+  <div class="flex justify-center">
+    <button
+      class="material-icons change text-principal-color pb-4"
+      id="buttonBurgger">flare</button
+    >
+  </div>
+</div>
 <script>
   const button = document.getElementById("change");
+  const buttonBurgger = document.getElementById("buttonBurgger");
+
   button?.addEventListener("click", () => {
+    changeTheme();
+  });
+  buttonBurgger?.addEventListener("click", () => {
+    changeTheme();
+  });
+  function changeTheme() {
     document.documentElement.classList.toggle("dark");
     localStorage.setItem(
       "theme",
       document.documentElement.classList.contains("dark") ? "dark" : "light"
     );
+  }
+  const menuButton = document.getElementById("menuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuButton?.addEventListener("click", () => {
+    console.log("click");
+    mobileMenu?.classList.toggle("hidden");
   });
 </script>

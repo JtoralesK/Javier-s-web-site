@@ -1,14 +1,12 @@
+---
+import DefaultP from "./DefaultP.astro";
+---
+
 <div
   id="aboutme"
   class="w-full sm:h-auto lg:h-screen bg-second-color px-6 lg:px-12 xl:px-24 dark:bg-dark-two"
 >
-  <div class="flex justify-center">
-    <p
-      class="text-center sm:my-4 lg:my-8 px-4 py-2 bg-third-color rounded-2xl text-principal-color"
-    >
-      About me
-    </p>
-  </div>
+  <DefaultP text="About me" />
   <div class="flex flex-wrap">
     <div
       class="w-full lg:w-1/2 sm:h-[18em] h-full flex justify-center items-center"

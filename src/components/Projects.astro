@@ -1,9 +1,10 @@
 ---
 import DefaultP from "./DefaultP.astro";
+import { standar } from "../pages/index.astro";
 ---
 
 <div
-  class="w-full sm:h-auto lg:h-screen px-6 lg:px-12 xl:px-24 dark:bg-dark-one pb-10"
+  class={"w-full sm:h-auto lg:h-screen dark:bg-dark-one pb-10" + standar}
   id="projects"
 >
   <DefaultP text="Projects" />

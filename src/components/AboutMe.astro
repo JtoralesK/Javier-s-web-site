@@ -1,10 +1,12 @@
 ---
+import { standar } from "../pages/index.astro";
 import DefaultP from "./DefaultP.astro";
 ---
 
 <div
   id="aboutme"
-  class="w-full sm:h-auto lg:h-auto lg:pb-10 bg-second-color px-6 lg:px-12 xl:px-24 dark:bg-dark-two"
+  class={"w-full sm:h-auto lg:h-auto lg:pb-10 bg-second-color dark:bg-dark-two" +
+    standar}
 >
   <DefaultP text="About me" />
   <div class="flex flex-wrap">

@@ -6,6 +6,7 @@ export default {
 		extend: {
 			screens: {
 			  'sm': { 'max': '599px' },
+			  'md': '768px',
 			  'lg': '924px',
 			  'xl': '1024px',
 			},

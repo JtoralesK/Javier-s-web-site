@@ -2,10 +2,11 @@
 import MovileNav from "./MovileNav.astro";
 import Dropdown from "./Dropdown.astro";
 import NavLink from "../ui/NavLink.astro";
+import { navLinks } from "../es";
 ---
 
 <nav
-  class="w-full flex flex-row justify-between items-center sm:relative py-4 px-6 lg:px-12 xl:px-24 dark:bg-dark-one py-2"
+  class="w-full flex flex-row justify-between items-center sm:relative dark:bg-dark-one py-2"
 >
   <a href="#home">
     <img
@@ -21,10 +22,8 @@ import NavLink from "../ui/NavLink.astro";
   </a>
 
   <ul class="hidden lg:flex flex-row gap-6">
-    <NavLink text="About me" hreft="aboutme" />
-    <NavLink text="Contact" hreft="contact" />
-    <NavLink text="Projects" hreft="projects" />
-    <NavLink text="Services" hreft="services" />
+    {navLinks.map((link) => <NavLink text={link.text} hreft={link.hreft} />)}
+
     <Dropdown />
   </ul>
   <div class="hidden lg:flex flex-row items-center gap-2">

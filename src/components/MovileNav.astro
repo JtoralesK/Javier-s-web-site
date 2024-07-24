@@ -1,20 +1,19 @@
+---
+import { navLinks } from "../es";
+---
+
 <div
   id="mobileMenu"
   class="hidden lg:hidden sm:h-auto w-full bg-gray-2 dark:bg-dark-two dark:text-principal-color absolute top-16 left-0 overflow-hidden transition-height"
 >
   <ul class="lg:flex flex-col gap-6">
-    <a href="#aboutme">
-      <li class="px-3 py-4 text-xl text-principal-color">About me</li>
-    </a>
-    <a href="#aboutme">
-      <li class="px-3 py-4 text-xl text-principal-color">Contact</li>
-    </a>
-    <a href="#aboutme">
-      <li class="px-3 py-4 text-xl text-principal-color">Blog</li>
-    </a>
-    <a href="#aboutme">
-      <li class="px-3 py-4 text-xl text-principal-color">Services</li>
-    </a>
+    {
+      navLinks.map((link) => (
+        <li class="px-3 py-4 text-xl text-principal-color">
+          <a href="#aboutme">{link.text}</a>
+        </li>
+      ))
+    }
   </ul>
   <div class="flex justify-center">
     <button

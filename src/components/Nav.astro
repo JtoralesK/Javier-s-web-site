@@ -1,34 +1,30 @@
 ---
 import MovileNav from "./MovileNav.astro";
 import Dropdown from "./Dropdown.astro";
+import NavLink from "../ui/NavLink.astro";
 ---
 
 <nav
-  class="h-20 w-full flex flex-row justify-between items-center lg:pt-3 sm:relative px-6 lg:px-12 xl:px-24 bg-gray-1 dark:bg-dark-one py-2"
+  class="w-full flex flex-row justify-between items-center sm:relative py-4 px-6 lg:px-12 xl:px-24 dark:bg-dark-one py-2"
 >
-  <img
-    src="https://res.cloudinary.com/apxschool/image/upload/v1721274096/logoSinFondo_b677mv.png"
-    alt="Logo"
-    class="w-10 dark:hidden"
-  />
-  <img
-    src="https://res.cloudinary.com/apxschool/image/upload/v1721482747/logoSinFondoBlanco_lawv9c.png"
-    alt="Logo"
-    class="w-10 hidden dark:block"
-  />
+  <a href="#home">
+    <img
+      src="https://res.cloudinary.com/apxschool/image/upload/v1721274096/logoSinFondo_b677mv.png"
+      alt="Logo"
+      class="w-10 dark:hidden"
+    />
+    <img
+      src="https://res.cloudinary.com/apxschool/image/upload/v1721482747/logoSinFondoBlanco_lawv9c.png"
+      alt="Logo"
+      class="w-10 hidden dark:block"
+    />
+  </a>
+
   <ul class="hidden lg:flex flex-row gap-6">
-    <a href="#aboutme">
-      <li class="text-principal-color">About me</li>
-    </a>
-    <a href="#contact">
-      <li class="text-principal-color">Contact</li>
-    </a>
-    <a href="#projects">
-      <li class="text-principal-color">Projects</li>
-    </a>
-    <a href="#aboutme">
-      <li class="text-principal-color">Services</li>
-    </a>
+    <NavLink text="About me" hreft="aboutme" />
+    <NavLink text="Contact" hreft="contact" />
+    <NavLink text="Projects" hreft="projects" />
+    <NavLink text="Services" hreft="services" />
     <Dropdown />
   </ul>
   <div class="hidden lg:flex flex-row items-center gap-2">
@@ -37,8 +33,16 @@ import Dropdown from "./Dropdown.astro";
       id="change">flare</button
     >
 
-    <button class="rounded rounded-xl bg-dark-two px-2 p-2 text-principal-color"
-      >Download CV</button
+    <button
+      id="downloadCV"
+      class="rounded rounded-xl bg-dark-two px-2 p-2 text-principal-color"
+      ><a
+        href="https://drive.google.com/file/d/1ym7uaqEs6gJBz6koi4R0r3PTduYpQEvt/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver CV
+      </a></button
     >
   </div>
   <button id="menuButton" class="lg:hidden">

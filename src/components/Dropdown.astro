@@ -1,15 +1,15 @@
-<div class="relative inline-block text-left">
+<div class="relative inline-block text-left group">
   <div>
     <button
       type="button"
-      class="inline-flex w-full justify-center text-white"
+      class="inline-flex w-full justify-center items-center text-gray-1 dark:text-white"
       id="menu-button"
       aria-expanded="true"
       aria-haspopup="true"
     >
-      More
+      <p>More</p>
       <svg
-        class="-mr-1 h-5 w-5 text-gray-400"
+        class="mr-2 h-5 w-5 text-gray-1 dark:text-white"
         viewBox="0 0 20 20"
         fill="currentColor"
         aria-hidden="true"
@@ -23,7 +23,8 @@
   </div>
 
   <div
-    class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-1 dark:bg-dark-two shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+    class="hidden absolute left-0 z-10 mt-2 w-40
+     rounded-md bg-gray-1 dark:bg-dark-two group-hover:block"
     role="menu"
     id="menu"
     aria-orientation="vertical"
@@ -31,37 +32,43 @@
     tabindex="-1"
   >
     <div class="py-1" role="none">
-      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
       <a
-        href="#"
-        class="block px-4 py-2 text-sm text-principal-color"
+        href="/blog"
+        class="block px-4 py-2 text-sm text-principal-color hover:text-gray-2"
         role="menuitem"
         tabindex="-1"
         id="menu-item-0">Blog</a
       >
       <a
         href="#"
-        class="block px-4 py-2 text-sm text-principal-color"
+        class="block px-4 py-2 text-sm text-principal-color hover:text-gray-2"
         role="menuitem"
         tabindex="-1"
         id="menu-item-1">English's website</a
       >
       <a
         href="#"
-        class="block px-4 py-2 text-sm text-principal-color"
+        class="block px-4 py-2 text-sm text-principal-color hover:text-gray-2"
         role="menuitem"
         tabindex="-1"
-        id="menu-item-1">Chess's website</a
+        id="menu-item-1"
       >
+        Chess's website
+      </a>
     </div>
   </div>
 </div>
-<script>
-  const menuButton = document.getElementById("menu-button");
-  const Dropdown = document.getElementById("menu");
+<style>
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
-  menuButton?.addEventListener("click", () => {
-    console.log("click");
-    Dropdown?.classList.toggle("hidden");
-  });
-</script>
+  .menu::hover {
+    transition: width 0.3s ease; /* Transición suave */
+  }
+</style>

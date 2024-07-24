@@ -1,0 +1,37 @@
+---
+// Button.astro
+export interface Props {
+  text: string;
+  hreft: string;
+}
+
+const { text, hreft } = Astro.props;
+---
+
+<a href={`#` + hreft}>
+  <li class="text-gray-1 dark:text-principal-color relative pb-2 animated-bar">
+    {text}
+  </li>
+</a>
+<style>
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .animated-bar::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid theme("colors.gray-2"); /* Color azul */
+    width: 0; /* Inicia con ancho 0 */
+    transition: width 0.9s ease; /* Transición suave */
+  }
+
+  .animated-bar:hover::after {
+    animation: drawLine 0.3s ease forwards; /* Duración de 0.3 segundos */
+  }
+</style>

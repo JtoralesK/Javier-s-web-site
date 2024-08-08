@@ -20,32 +20,24 @@ export const home = {
 export const aboutMe = {
   section: "sobre mi",
   idSection: "sobremi",
-  title: "Curius about me? Here you have it:",
+  title: "Un poco sobre mi",
   description: [
-    `Welcome to a little glimpse into my world! My name is Javier Torales, and
-     I’m a passionate Java Fullstack Developer with a flair for creating seamless
-     and efficient web applications. My journey in the world of programming began
-     a few years ago, and it has been a thrilling ride ever since.
-     From the moment I wrote my first line of code, I was hooked on the
-     endless possibilities that the world of software development offers. `,
-    `I recently completed a two-year technicature in programming, a period
-        during which I immersed myself in various programming languages,
-        frameworks, and tools.This experience not only solidified my technical skills but also ignited
-        a deep-seated passion for continuous learning and innovation in the tech
-        space. As a Fullstack Developer, I specialize in Java for the backend,
-        ensuring robust and scalable server-side applications.`,
-    ` For the frontend,
-        I wield React with finesse, crafting dynamic and responsive user
-        interfaces that provide a seamless user experience.
-        I thrive on the challenges that come with integrating the frontend and backend,
-        creating cohesive and efficient applications that meet user needs and exceed
-        expectations.`,
+    `Bienvenido a mi sitio web, querido amigo. Mi nombre es Javier Torales y soy programador.
+Me apasiona encontrar la mejor estrategia a la hora de resolver un problema.
+Más allá de las tecnologías y el código, busco descomponer la incógnita y tratar de resolver
+la ecuación en pequeñas partes, trabajando paso a paso y encontrando una manera
+sencilla y práctica de solucionarlo.
+`,
+    `Mis intereses abarcan Java con Spring Boot, utilizando JPA como ORM para trabajar con MySQL,
+así como React.js con Tailwind para representar visualmente los datos con los que he trabajado. Como desarrollador,
+siempre trato de seguir buenas practicas, escribir código limpio y mantenerme actualizado con las últimas tecnologías.
+Desde utilizar testing, patrones de diseño, hasta buscar el mejor nombre de una variable o función.
+`,
+    `Por ultimo, quiero decir que soy una persona cuya motivación de seguir aprendiendo se basa en 
+     concretar metas y superar desafíos. Me gusta trabajar en equipo, compartir conocimientos y aprender de los demás.
+      Siempre estoy dispuesto a ayudar y aportar mi granito de arena en cualquier proyecto.
+    .`,
   ],
 
-  skills: [
-    "using various technologies",
-    "using various technologies",
-    "using various technologies",
-    "using various technologies",
-  ],
+  skills: ["Autodidacta", "Persistencia", "Colaboración", "Iniciativa"],
 };

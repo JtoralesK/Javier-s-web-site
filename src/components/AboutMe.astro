@@ -1,14 +1,15 @@
 ---
 import { standar } from "../pages/index.astro";
 import DefaultP from "./DefaultP.astro";
+import { aboutMe } from "../es";
 ---
 
 <div
-  id="aboutme"
+  id="sobremi"
   class={"w-full sm:h-auto lg:h-auto lg:pb-10 bg-second-color dark:bg-dark-two" +
     standar}
 >
-  <DefaultP text="About me" />
+  <DefaultP text="Sobre mi" />
   <div class="flex flex-wrap">
     <div
       class="w-full lg:w-1/2 sm:h-[20em] flex flex-row justify-center items-center"
@@ -21,43 +22,26 @@ import DefaultP from "./DefaultP.astro";
     </div>
     <div class="w-full lg:w-1/2 sm:mt-10 flex flex-col justify-center">
       <h2 class="text-xl text-bold dark:text-principal-color">
-        Curius about me? Here you have it:
+        {aboutMe.title}
       </h2>
-      <p class="text-16 text-gray-600">
-        <br />
-        Welcome to a little glimpse into my world! My name is Javier Torales, and
-        I’m a passionate Java Fullstack Developer with a flair for creating seamless
-        and efficient web applications. My journey in the world of programming began
-        a few years ago, and it has been a thrilling ride ever since. From the moment
-        I wrote my first line of code, I was hooked on the endless possibilities
-        that the world of software development offers. I recently completed a two-year
-        technicature in programming, a period during which I immersed myself in various
-        programming languages, frameworks, and tools.
-        <br />
-        This experience not only solidified my technical skills but also ignited
-        a deep-seated passion for continuous learning and innovation in the tech
-        space. <br /><br />
-        As a Fullstack Developer, I specialize in Java for the backend, ensuring
-        robust and scalable server-side applications. For the frontend, I wield React
-        with finesse, crafting dynamic and responsive user interfaces that provide
-        a seamless user experience. I thrive on the challenges that come with integrating
-        the frontend and backend, creating cohesive and efficient applications that
-        meet user needs and exceed expectations.
-        <br />
-        One of the projects I am particularly proud of involves creating an interactive
-        web application where I had to manage videos without relying on third-party
-        services like YouTube. This project was not just a technical challenge but
-        also a learning opportunity, pushing me to explore new solutions and think
-        outside the box. I have documented this journey.
-        <br />
-      </p>
+      {
+        aboutMe.description.map((text) => {
+          return (
+            <>
+              <br />
+              <p class="text-16 text-gray-600">{text}</p>
+            </>
+          );
+        })
+      }
       <ul
         class="list-disc pl-2 grid sm:grid-cols-1 lg:grid-cols-2 gap-4 w-5/6 text-gray-600 mt-6 sm:mb-12"
       >
-        <li class="list-inside">using various technologies</li>
-        <li class="list-inside">using various technologies</li>
-        <li class="list-inside">using various technologies</li>
-        <li class="list-inside">using various technologies</li>
+        {
+          aboutMe.skills.map((skill) => {
+            return <li class="list-inside">{skill}</li>;
+          })
+        }
       </ul>
     </div>
   </div>

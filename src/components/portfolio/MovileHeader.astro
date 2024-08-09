@@ -10,7 +10,9 @@ import { navLinks } from "../../es";
     {
       navLinks.map((link) => (
         <li class="px-3 py-4 text-xl text-principal-color">
-          <a href={link.hreft}>{link.text}</a>
+          <a class="w-full h-full block" href={link.hreft}>
+            {link.text}
+          </a>
         </li>
       ))
     }

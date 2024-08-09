@@ -3,10 +3,11 @@ type navLink = {
   hreft: string;
 };
 export const navLinks: navLink[] = [
-  { text: "Sobre mi", hreft: "sobremi" },
-  { text: "Contacto", hreft: "contacto" },
-  { text: "Projectos", hreft: "projectos" },
-  { text: "Servicios", hreft: "servicios" },
+  { text: "Sobre mi", hreft: "/#sobremi" },
+  { text: "Contacto", hreft: "/#contacto" },
+  { text: "Projectos", hreft: "/#projectos" },
+  { text: "Servicios", hreft: "/#servicios" },
+  { text: "Blog", hreft: "/blog" },
 ];
 export const home = {
   title: "Hola, soy Javier 👋",
@@ -35,8 +36,7 @@ Desde utilizar testing, patrones de diseño, hasta buscar el mejor nombre de una
 `,
     `Por ultimo, quiero decir que soy una persona cuya motivación de seguir aprendiendo se basa en 
      concretar metas y superar desafíos. Me gusta trabajar en equipo, compartir conocimientos y aprender de los demás.
-      Siempre estoy dispuesto a ayudar y aportar mi granito de arena en cualquier proyecto.
-    .`,
+      Siempre estoy dispuesto a ayudar y aportar mi granito de arena en cualquier proyecto.`,
   ],
 
   skills: ["Autodidacta", "Persistencia", "Colaboración", "Iniciativa"],

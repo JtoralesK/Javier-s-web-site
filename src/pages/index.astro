@@ -1,17 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
-import Home from "../components/Home.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
-import Contact from "../components/Contact.astro";
+import Nav from "../components/portfolio/Header.astro";
+import Home from "../components/portfolio/Home.astro";
+import AboutMe from "../components/portfolio/AboutMe.astro";
+import Projects from "../components/portfolio/Projects.astro";
+import Footer from "../components/portfolio/Footer.astro";
+import Contact from "../components/portfolio/Contact.astro";
 
 export const standar = " py-4 px-6 md:px-12 lg:px-18 xl:px-40";
 ---
 
 <Layout title="ToralesJ's Website">
-  <div class={"bg-principal-color dark:bg-dark-one" + standar} id="home">
+  <div class={"bg-dark-one" + standar} id="home">
     <Nav />
     <Home />
   </div>

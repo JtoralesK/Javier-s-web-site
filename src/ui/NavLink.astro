@@ -8,7 +8,7 @@ export interface Props {
 const { text, hreft } = Astro.props;
 ---
 
-<a href={`#` + hreft}>
+<a href={hreft}>
   <li class="text-gray-1 dark:text-principal-color relative pb-2 animated-bar">
     {text}
   </li>

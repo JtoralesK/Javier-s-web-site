@@ -1,0 +1,76 @@
+---
+import DefaultP from "./DefaultP.astro";
+import { standar } from "../../pages/index.astro";
+---
+
+<div
+  class={"w-full sm:h-auto lg:h-screen bg-dark-one pb-10" + standar}
+  id="projectos"
+>
+  <DefaultP text="Proyectos" />
+  <p class="text-center text-gray-600">Algunos de mis proyectos</p>
+  <div class="w-full h-auto flex flex-wrap mt-10 shadow-2xl justify-center">
+    <div
+      class="sm:w-full lg:w-1/2 lg:h-[25em] flex justify-center items-center bg-dark-three"
+    >
+      <div class="w-full h-full flex justify-center items-center">
+        <iframe
+          id="hover-video"
+          src="https://www.youtube.com/embed/QuW5jvrEyGA?autoplay=1&mute=1&modestbranding=1&showinfo=0&rel=0"
+          allow="autoplay; fullscreen"
+          class="w-full h-full"></iframe>
+      </div>
+    </div>
+    <div
+      class="sm:w-full lg:w-1/2 sm:h-[38em] lg:h-[25em] sm:px-5 flex flex-col lg:p-7 bg-dark-two justify-center"
+    >
+      <h2 class="text-xl font-bold text-principal-color">
+        Sistema de una tienda de ropa
+      </h2>
+      <p class="text-principal-color">
+        Este proyecto gestiona usuarios, ventas y productos de una tienda de
+        ropa. Además, genera reportes e informes detallados sobre las ventas y
+        el stock de productos.
+      </p>
+      <div class="mt-5">
+        <ul class="w-2/3 flex flex-wrap gap-4">
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">Java</li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">
+            Spring Boot
+          </li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">Jpa</li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">JWT</li>
+
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">Msql</li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">
+            React.js
+          </li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">
+            Tailwindcss
+          </li>
+          <li class="p-2 bg-gray-300 rounded-xl text-sm text-gray-600">
+            Next.js
+          </li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <a
+          class="flex gap-2 items-center text-principal-color"
+          href="https://github.com/JtoralesK/back-api-shop"
+          target="_blank"
+        >
+          <i class="fa-solid fa-link"> </i>Proyecto Backend Github</a
+        >
+        <a
+          class="flex gap-2 items-center mt-2 text-principal-color"
+          href="https://github.com/JtoralesK/Shop-App-Front"
+          target="_blank"
+        >
+          <i class="fa-solid fa-link r"> </i>
+          Proyecto Frontend Github</a
+        >
+      </div>
+    </div>
+    <div></div>
+  </div>
+</div>

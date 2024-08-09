@@ -1,0 +1,46 @@
+---
+import Dropdown from "./Dropdown.astro";
+import NavLink from "../../ui/NavLink.astro";
+import { navLinks } from "../../es";
+import MovileHeader from "./MovileHeader.astro";
+---
+
+<header
+  class="w-full flex flex-row justify-between items-center sm:relative bg-dark-one py-1"
+>
+  <a href="/">
+    <img
+      src="https://res.cloudinary.com/apxschool/image/upload/v1721482747/logoSinFondoBlanco_lawv9c.png"
+      alt="Logo"
+      class="w-10"
+    />
+  </a>
+
+  <ul class="hidden lg:flex flex-row gap-6">
+    {
+      navLinks.map((link) => {
+        if (link.text != "Blog")
+          return <NavLink text={link.text} hreft={link.hreft} />;
+      })
+    }
+
+    <Dropdown />
+  </ul>
+  <div class="hidden lg:flex flex-row items-center gap-2">
+    <button
+      id="downloadCV"
+      class="rounded rounded-xl bg-dark-two px-2 p-2 text-principal-color"
+      ><a
+        href="https://drive.google.com/file/d/1ym7uaqEs6gJBz6koi4R0r3PTduYpQEvt/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver CV
+      </a></button
+    >
+  </div>
+  <button id="menuButton" class="lg:hidden">
+    <span class="material-icons text-principal-color">menu</span>
+  </button>
+</header>
+<MovileHeader />

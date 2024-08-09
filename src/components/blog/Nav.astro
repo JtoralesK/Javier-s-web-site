@@ -1,0 +1,48 @@
+---
+const array = [
+  {
+    name: "Desarrollo web",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163326/desarrolloweb_fdopsu.png",
+  },
+  {
+    name: "Desarrollo móvil",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163336/desarrollomovil_oeztxo.png",
+  },
+  {
+    name: "Buenas prácticas",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163350/buenaspracticas_mjhwst.png",
+  },
+  {
+    name: "Productividad y motivación",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163369/productividad_n39d8f.png",
+  },
+  {
+    name: "Bases de datos",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163402/basededatos_smaip2.png",
+  },
+  {
+    name: "DevOps",
+    img: "https://res.cloudinary.com/apxschool/image/upload/v1723163410/rocket_vqfrhk.png",
+  },
+];
+---
+
+<div
+  class="w-full h-auto mt-2 shadow-dark-two shadow-xl shadow-sm text-white flex flex-col justify-around"
+>
+  <h1 class="text-center text-white text-3xl font-normal h-1/6">
+    Escoge tu categoría favorita
+  </h1>
+  <div class="flex flex-wrap items-center justify-evenly sm:mt-6 h-auto mt-6">
+    {
+      array.map((item) => (
+        <div class="h-40 sm:w-1/2  w-40  sm:p-2 cursor-pointer ">
+          <div class="w-full h-24 bg-dark-two hover:bg-[#1F2937] rounded-t-md">
+            <img class="bg-cover h-full w-full " src={item.img} />
+          </div>
+          <p class="text-center">{item.name}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>

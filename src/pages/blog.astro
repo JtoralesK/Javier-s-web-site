@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/portfolio/Header.astro";
+import Footer from "../components/portfolio/Footer.astro";
+import Nav from "../components/blog/Nav.astro";
+export const standar = " py-4 px-6 md:px-12 lg:px-18 xl:px-40";
+import Hashtags from "../components/blog/Hashtags.astro";
+import ArticulosSection from "../components/blog/ArticulosSection.astro";
+---
+
+<Layout title="ToralesJ's Website">
+  <div class={"bg-dark-one pb-10 " + standar}>
+    <Header />
+
+    <main class="h-auto">
+      <div class="flex items-center justify-center flex-col">
+        <Nav />
+        <div class="w-full h-auto mt-4 flex flex-wrap justify-between">
+          <ArticulosSection />
+          <Hashtags />
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer
+    class="w-full flex items-center justify-center bg-dark-two px-6 lg:px-12 xl:px-24"
+  >
+    <p class="p-2 text-gray-2 dark:text-principal-color text-center">
+      &copy; 2024 Diseñado y desarrollado por Torales Javier
+    </p>
+  </footer>
+</Layout>
